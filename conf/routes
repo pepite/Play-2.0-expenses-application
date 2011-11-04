@@ -1,0 +1,13 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+GET     /                                       controllers.Application.index()
+GET     /review                                 controllers.Application.review()
+GET     /paid                                   controllers.Application.paid()
+
+POST    /picture/add            				controllers.Application.addPicture(file:String)
+
+# Map static resources from the /public folder to the /public path
+GET     /public/*file           controllers.Assets.at(path="/public", file)
+
+            

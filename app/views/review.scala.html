@@ -1,0 +1,86 @@
+@main("Create an expense form") {
+
+
+    <hgroup>
+        <h2>Expense form Nicolas Leroux (February - Mars)</h2>
+    </hgroup>
+
+    <form style="width: 70%; margin-left: auto; margin-right: auto; ">
+        <h3>Items</h3>
+        <table  style="width: 100%;" cellspacing="0" class="datatable">
+            <col class="amount"/>
+            <col class="btw"/>
+            <col class="subtotal"/>
+            <col class="numberofitems"/>
+            <col class="total"/>
+            <col class="description"/>
+            <thead>
+                <tr>
+                    <th scope="col">Amount</th>
+                    <th scope="col">BTW</th>
+                    <th scope="col">Sub total</th>
+                    <th scope="col">Number of items</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Description</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                     <td>123 €</td>
+                     <td>10 €</td>
+                     <td>133 €</td>
+                     <td>1</td>
+                     <td>133 €</td>
+                     <td>An important item</td>
+                 </tr>
+                <tr>
+                     <td>123 €</td>
+                     <td>10 €</td>
+                     <td>133 €</td>
+                     <td>2</td>
+                     <td>266 €</td>
+                     <td>Another important item</td>
+                 </tr>
+            </tbody>
+
+        </table>
+
+        <h3>Attachments</h3>
+        <div class="attachments" style="border: #DDD 1px dashed; padding: 10px">
+
+           <div style=" display: inline-block; width:94px; margin-bottom: 30px;">
+             <img align="top" style="width:70px; padding: 10px;" src="/public/images/example%20doc.png"/>
+             <span style="float:left; padding-left: 10px" >booking.pdf</span>
+           </div>
+           <div style="display: inline-block; width:94px; margin-bottom: 30px;">
+             <img align="top" style="width:70px; padding: 10px;" src="/public/images/example%20doc.png"/>
+             <span style="float:left; padding-left: 10px" >booking2.pdf</span>
+           </div>
+           <div style="display: inline-block; width:94px; margin-bottom: 30px;">
+             <img align="top" style="width:70px; padding: 10px;" src="/public/images/example%20doc.png"/>
+             <span style="float:left; padding-left: 10px" >booking3.pdf</span>
+           </div>
+        </div>
+
+
+        <h3>Comments</h3>
+
+        <div style="margin-top: 10px;">
+                <span style="font-style: italic; margin-bottom: 10px;">Nicolas wrote 10 minutes ago:</span><br>
+                 <code style="margin-left: 10px; padding-left: 5px"> Bla bla abla bla ala blala vbla
+                 alfl abvlb afls als a asldla ald a asldl alsa d
+                 </code>
+
+        </div>
+
+        <textarea style="margin-top: 30px" rows="5" cols="15" required placeholder="Please add any comments here"></textarea>
+        <div class="buttons">
+           <button type="submit" class="check" style="float: right" value="Approve expense form">Approve</button>
+           <button type="submit" class="delete " style="float: right" value="Reject expense form">Reject</button>
+           <button type="submit" class="print " style="float: right" value="Print expense form">Print</button>
+        </div>
+
+    </form>
+    
+}

@@ -1,0 +1,83 @@
+@main("Create an expense form") {
+
+
+    <hgroup>
+        <h2>Paid expenses 2011</h2>
+    </hgroup>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages:["corechart"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Month');
+        data.addColumn('number', 'Expenses');
+        data.addRows(4);
+        data.setValue(0, 0, 'January');
+        data.setValue(0, 1, 2021);
+        data.setValue(1, 0, 'February');
+        data.setValue(1, 1, 1170);
+        data.setValue(2, 0, 'Mars');
+        data.setValue(2, 1, 660);
+        data.setValue(3, 0, 'April');
+        data.setValue(3, 1, 1540);
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, {width: 400, height: 240, title: 'Paid expenses per month',
+                          hAxis: {title: '2011', titleTextStyle: {color: 'red'}}
+                         });
+      }
+    </script>
+
+
+    <form style="width: 70%; margin-left: auto; margin-right: auto; ">
+        <h3></h3>
+        <p>Select the year</p>
+            <select style="margin-bottom:20px">
+                <option>2011</option>
+                <option>2010</option>
+                <option>2009</option>
+                <option>2008</option>
+            </select>
+
+        <p>Click on a row to view the details</p>
+
+
+        <table style="width: 100%;" cellspacing="0" class="datatable">
+            <col class="employee"/>
+            <col class="period"/>
+            <col class="year"/>
+            <col class="total"/>
+            <col class="comment"/>
+            <thead>
+                <tr>
+                    <th scope="col">Employee</th>
+                    <th scope="col">Period</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Comment</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                     <td>Nicolas Leroux</td>
+                     <td>(February - Mars)</td>
+                     <td>1233 €</td>
+                     <td>An important comment</td>
+                 </tr>
+                <tr>
+                     <td>Nicolas Leroux</td>
+                     <td>(April)</td>
+                     <td>222 €</td>
+                     <td>No comment</td>
+                 </tr>
+            </tbody>
+
+        </table>
+
+
+        <div id="chart_div"></div>
+    </form>
+    
+}

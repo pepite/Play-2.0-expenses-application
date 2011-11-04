@@ -1,0 +1,79 @@
+/*  ###########################################################################
+    Author:     Lunatech Labs
+    date:       February 2011
+    ########################################################################### */
+    
+//  Edit the lib file to match your projects design;
+    @import "_lib.less";
+
+//  These base files contain patterns that usually do not need editing.    
+    @import "_base.less";
+    @import "_forms.less";
+
+    
+//  Add your project LESS files below. 
+//  The files below are used for this project so feel free to remove, edit or replace to your hearts content. 
+
+    //  Library files
+    @import "_jquery-ui.less";
+    @import "_datatable.less";
+    
+    //  Custom styles (project based)
+    @import "_app.less";
+    @import "_adaptive-layout.less";
+
+
+	#coming, .coming {
+	    position: absolute;
+	    top: 15px;
+	    left: 180px;
+	    padding: 17px 6px 17px;
+	    -moz-transform: rotate(-13deg);
+	    -webkit-transform: rotate(-13deg);
+	    -o-transform: rotate(-13deg);
+	    -ms-transform: rotate(-13deg);
+	    -webkit-transition: top .1s ease-in-out;
+	    text-align: center;
+	    text-transform: uppercase;
+	    font-size: 8px;
+	    color: #888;
+	    -moz-border-radius: 60px;
+	    -webkit-border-radius: 60px;
+	    -webkit-background-clip: padding-box;
+	    border-radius: 60px;
+	    -moz-border-radius: 60px;
+	    -webkit-border-radius: 60px;
+	    border-radius: 60px;
+	    -webkit-background-clip: padding-box;
+	    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+	    background: white;
+	    font-family: 'adelle-1', 'adelle-2', Georgia, "Times New Roman", serif
+	}
+
+	.right {
+	    float:right;
+	}
+
+	.dataTables_length, .fg-toolbar {
+	    display: none;
+	}
+
+	.content .dataTables_wrapper {
+	    min-height: 20px;
+	    margin-bottom: 50px;
+	}
+
+	h3 {
+	    margin-top: 50px;
+	}
+
+	nav ul li span {
+	    padding-right: 10px;
+	}
+	
+	.dragging {
+	opacity: 0.6;
+	background-color: #777;
+	}

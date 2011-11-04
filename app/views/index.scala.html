@@ -1,0 +1,154 @@
+@main("Create an expense form") {
+
+
+    <hgroup>
+        <h2>Expense form Nicolas Leroux (February - Mars)</h2>
+    </hgroup>
+
+    <form style="width: 70%; margin-left: auto; margin-right: auto;">
+        <h3>Period</h3>
+            <div style="color:#888;font-size:18px; margin-top: 5px  ">
+                <span>February<a href="#" style="position:relative;top: -3px;display: inline-block;" class="ui-icon ui-icon-closethick"></a></span>
+                <span style="margin-left: 5px">Mars<a href="#" style="position:relative;top: -3px;display: inline-block;" class="ui-icon ui-icon-closethick"></a></span>
+
+            </div>
+            <div style="margin-top: 20px; width: 150px;" ><select style="padding: 12px; height:50px">
+                <option>January</option>
+                <option>February</option>
+                <option>Mars</option>
+                <option selected>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+            </select><a href="#" class=""> Add</a>
+            </div>
+    </form>
+    <form style="width: 70%; margin-left: auto; margin-right: auto; ">
+        <h3>Items</h3>
+        <!-- <span style="float: right"><button class="save">Save as template</button></span> -->
+        <p>Please enter the items you would like to expense.</p>
+        <table style="width: 100%;" cellspacing="0" class="datatable">
+            <col class="amount"/>
+            <col class="btw"/>
+            <col class="subtotal"/>
+            <col class="numberofitems"/>
+            <col class="total"/>
+            <col class="description"/>
+            <col class="actions"/>
+            <thead>
+                <tr>
+                    <th scope="col">Amount</th>
+                    <th scope="col">BTW</th>
+                    <th scope="col">Sub total</th>
+                    <th scope="col">Number of items</th>
+                    <th scope="col">Total</th>
+                    <th scope="col">Description</th>
+                    <th scope="col"> </th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                     <td>123 €</td>
+                     <td>10 €</td>
+                     <td>133 €</td>
+                     <td>1</td>
+                     <td>133 €</td>
+                     <td>An important item</td>
+                     <td><a href="#" class="ui-icon ui-icon-trash">delete</a></td>
+                 </tr>
+                <tr>
+                     <td>123 €</td>
+                     <td>10 €</td>
+                     <td>133 €</td>
+                     <td>2</td>
+                     <td>266 €</td>
+                     <td>Another important item</td>
+                     <td><a href="#" class="ui-icon ui-icon-trash">delete</a></td>
+                 </tr>
+            </tbody>
+
+
+            <tfoot>
+              <tr>
+                    <td><input type="text" placeholder="Amount"/></td>
+                    <td><input type="text" placeholder="BTW"/></td>
+                    <td>0 €</td>
+                    <td><input type="text" placeholder="number of items" value="1"/></td>
+                    <td>0 €</td>
+                    <td><input type="text" placeholder="description" /></td>
+                    <td><a href="#" class="add">&nbsp;</a></td>
+                </tr>
+             <tr style="background: #EEE;" >
+                    <td style="padding-top:4px; border-top: 2px solid gray;">246 €</td>
+                    <td style="padding-top:4px; border-top: 2px solid gray;">20 €</td>
+                    <td style="padding-top:4px; border-top: 2px solid gray;">266 €</td>
+                    <td style="padding-top:4px; border-top: 2px solid gray;">3</td>
+                    <td style="padding-top:4px; border-top: 2px solid gray;"><b>399 €</b></td>
+                    <td style="padding-top:4px; border-top: 2px solid gray;"></td>
+                    <td style="padding-top:4px; border-top: 2px solid gray;"></a></td>
+                </tr>
+            </tfoot>
+
+        </table>
+
+
+		<style>
+		#attachments {
+			position: relative;
+			margin-bottom: -200px;
+			filter: alpha(opacity = 0);
+	        -khtml-opacity: 0;
+	        -webkit-opacity: 0;
+	        -moz-opacity: 0;
+	        opacity: 0;
+	        height: 220px;
+		    width: 100%;
+	    }
+	</style>
+        <h3>Attachments</h3>
+        <p>Drag and drop files to this area to add attachments</p>
+		<form id="upload">
+        <div class="attachments" style="border: #DDD 1px dashed; padding: 10px">
+		   <input type="file" draggable="true" multiple="true" name="picture" id="attachments"/>
+           <div style=" display: inline-block; width:94px; margin-bottom: 30px;">
+             <span style=" position: relative; top: 25px; float: right; width: 30px; height: 30px;background: url('/public/images/fancy_closebox.png')" >
+             </span>
+             <img align="top" style="width:70px; padding: 10px;" src="/public/images/example%20doc.png"/>
+             <span style="float:left; padding-left: 10px" >booking.pdf</span>
+           </div>
+           <div style="display: inline-block; width:94px; margin-bottom: 30px;">
+             <span style=" position: relative; top: 25px; float: right; width: 30px; height: 30px;background: url('/public/images/fancy_closebox.png')" >
+             </span>
+             <img align="top" style="width:70px; padding: 10px;" src="/public/images/example%20doc.png"/>
+             <span style="float:left; padding-left: 10px" >booking2.pdf</span>
+           </div>
+           <div style="display: inline-block; width:94px; margin-bottom: 30px;">
+             <span style=" position: relative; top: 25px; float: right; width: 30px; height: 30px;background: url('/public/images/fancy_closebox.png')" >
+             </span>
+             <img align="top" style="width:70px; padding: 10px;" src="/public/images/example%20doc.png"/>
+             <span style="float:left; padding-left: 10px" >booking3.pdf</span>
+           </div>
+        </div>
+        <div class="buttons">
+            <button type="submit" style="float:left" class="add" value="Add">Add</button>
+        </div>
+		</form>
+
+        <h3>Comments</h3>
+
+        <textarea rows="5" cols="15" required placeholder="Please add any comments here"></textarea>
+        <div class="buttons">
+           <button type="submit" class="check" style="float: right" value="Submit expense form">Submit for approval</button>
+           <button type="submit" class="print " style="float: right" value="Print expense form">Print</button>
+           <button type="submit" class="delete" style="float: right" value="Delete expense form">Delete</button>
+        </div>
+
+    </form>
+    
+}
